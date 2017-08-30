@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hover in out</title>
+        <meta charset="UTF-8">
+        <link href="HoverInOut.css" rel="stylesheet">
+        <script type="text/javascript" src= "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+
+            $("img").hover(function(){
+                var temp = $(this).attr("src");
+                $(this).attr("src", $(this).attr("alt-src"));
+                $(this).attr("alt-src", temp);
+            }, function(){
+                var temp = $(this).attr("src");
+                $(this).attr("src", $(this).attr("alt-src"));
+                $(this).attr("alt-src", temp);
+            });
+        });
+
+        </script>
+    </head>
+    <body>
+        <div id="pics">
+            <img src='./images/classicFitFront.jpg' alt-src='./images/classicFitBack.jpg' temp/>
+            <img src='./images/modernFitFront.jpg' alt-src='./images/modernFitBack.jpg' temp/>
+            <img src='./images/skinnyFitFront.jpg' alt-src='./images/skinnyFitBack.jpg' temp/>
+            <img src='./images/slimFitFront.jpg' alt-src='./images/slimFitBack.jpg' temp/>
+            
+        </div>
+    </body>
+</html>
